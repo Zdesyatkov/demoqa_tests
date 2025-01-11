@@ -9,5 +9,13 @@ repositories {
 
 dependencies {
     implementation 'com.codeborne:selenide:7.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
 
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
